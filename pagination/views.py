@@ -29,6 +29,10 @@ class FormListView(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Form List View'
         context['filter_form'] = forms.FilterListView(self.request.GET)
+        get_copy = self.request.GET.copy()
+        if get_copy.get('page'):
+            get_copy.pop('page')
+        context['get_copy'] = get_copy
         return context
 
     def get_queryset(self):
