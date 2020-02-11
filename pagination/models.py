@@ -6,3 +6,10 @@ class ToDoList(models.Model):
     text = models.TextField(blank=True, default="something something ...")
     due_date = models.DateField(default = datetime.date.today)
 
+
+class Example(models.Model):
+    iteration = models.IntegerField()
+    pid = models.IntegerField()
+    randint = models.IntegerField()
+    datetime = models.DateTimeField(auto_now_add=True)
+
