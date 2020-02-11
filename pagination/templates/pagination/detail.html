@@ -1,0 +1,8 @@
+{% extends "pagination/base.html" %}
+{% block content %}
+
+<h3>{{ object.name }}</h3>
+<b>Comments: </b> <p>{{ object.text }}</p>
+<p>Date: {{ object.due_date|date }}</p>
+
+{% endblock content %}
