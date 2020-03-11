@@ -5,6 +5,11 @@ from django.views.generic.list import ListView
 from pagination import models
 from pagination import forms
 
+
+def about_view(request):
+    return render(request, 'pagination/about.html')
+
+
 def form_view(request, **kwargs):
     if request.method == "POST":
         todo_form = forms.ToDoForm(request.POST)
